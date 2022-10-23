@@ -9,7 +9,8 @@ public class Voyelle {
 	 
 	public static void main(String[] args) {
 		
-		System.out.println(maMehtode("oussamaouaddi")); //o,u,ssa,ma,o,u,a,ddi
+		System.out.println(maMehtode("home")); //"ho","me"
+		System.out.println(maMehtode("poupoul")); //"po"  "u"  "po"  "u"  "l"
 
 	}
 
@@ -29,9 +30,15 @@ public class Voyelle {
 	           if(estVoyelle(lettre)) {
 	        	   maChaine.add(mot.substring(index,i+1));
 	        	   index=i+1;
-	           }           
+	           }
+	          
 
-		}           
+		} 
+		
+		if(index==0 || index != mot.length()) {
+     	   maChaine.add(mot.substring(index));
+	
+		}
 		
 		return maChaine;
 		
